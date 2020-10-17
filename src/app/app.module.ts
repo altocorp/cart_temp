@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, LOCALE_ID, DEFAULT_CURRENCY_CODE} from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 import localeFr from '@angular/common/locales/fr';
 import { registerLocaleData } from '@angular/common';
 registerLocaleData(localeFr);
@@ -32,7 +33,8 @@ import { ProductItemComponent } from './components/shopping-cart/product-list/pr
   ],
   imports: [
     BrowserModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule
   ],
   providers: [{
     provide: LOCALE_ID,
